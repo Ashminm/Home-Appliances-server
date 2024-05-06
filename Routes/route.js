@@ -8,6 +8,7 @@ const jwtMiddileware=require('../Middileware/jwtMiddileware')
 const router= new express.Router()
 
 router.get('/all-products',productController.getAllProductController)
+router.get('/limit-products',productController.getLimitProductController)
 router.get('/get-product/:id',productController.getProductController)
 router.post('/user-register',userController.userRegister)
 router.post('/user-login',userController.userLogin)
@@ -18,5 +19,8 @@ router.delete('/wish-item-delete/:id',jwtMiddileware,wishlistController.deleteWi
 router.post('/add-to-cart',jwtMiddileware,cartController.addToCart)
 router.get('/get-cart',jwtMiddileware,cartController.getCartAll)
 router.get('/home-cart',jwtMiddileware,cartController.getHomeCart)
-
+router.delete('/cart-item-delete/:id',jwtMiddileware,cartController.deleteCartItem)
+router.get('/incre-item/:id',jwtMiddileware,cartController.incQuantity)
+router.get('/decri-item/:id',jwtMiddileware,cartController.decQuantity)
+router.delete('/clear-cart',jwtMiddileware,cartController.emptyCart)
 module.exports=router
