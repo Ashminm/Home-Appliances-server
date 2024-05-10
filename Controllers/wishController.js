@@ -27,6 +27,7 @@ exports.getWishItem=async(req,res)=>{
         const userId=req.payload
         const wishListProduct= await wishlist.find({userId})
         res.status(200).json(wishListProduct)
+        console.log(wishListProduct);
     }catch(err){
         res.status(401).json(err)
     }
@@ -50,4 +51,14 @@ exports.deleteWishItem=async(req,res)=>{
         res.status(401).json(err)
     }
 }
+
+exports.clearCollection = async (req, res) => {
+    try{
+        const userId = req.payload
+        const result=await wishlist.deleteMany({userId})
+        res.status(200).json(result+"Empty wishlist")
+    }catch(err){
+        res.status(401).json(err)
+    }
+};
 

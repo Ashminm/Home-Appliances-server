@@ -39,3 +39,14 @@ exports.userLogin=async(req,res)=>{
         console.log(err);
     }
 }
+
+    exports.geUserProfile=async(req,res)=>{
+        try{
+            const profileId=req.payload
+            const profilUser=await users.findOne({_id:profileId})
+            res.status(200).json(profilUser)
+        }catch(err){
+            res.status(401).json(err)
+           
+        }
+    }

@@ -22,5 +22,12 @@ router.get('/home-cart',jwtMiddileware,cartController.getHomeCart)
 router.delete('/cart-item-delete/:id',jwtMiddileware,cartController.deleteCartItem)
 router.get('/incre-item/:id',jwtMiddileware,cartController.incQuantity)
 router.get('/decri-item/:id',jwtMiddileware,cartController.decQuantity)
+// router.get('/decri-view-item/:id',jwtMiddileware,cartController.decViewQuantity)
 router.delete('/clear-cart',jwtMiddileware,cartController.emptyCart)
+router.delete('/clear-wish',jwtMiddileware,wishlistController.clearCollection)
+router.get('/trending-product',productController.getTrendingProductController)
+router.get('/user-profile',jwtMiddileware,userController.geUserProfile)
+
+
+
 module.exports=router

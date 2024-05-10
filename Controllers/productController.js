@@ -11,7 +11,7 @@ exports.getAllProductController=async(req,res)=>{
 }
 exports.getLimitProductController=async(req,res)=>{
     try{
-        const result= await products.find().limit(2)
+        const result= await products.find().limit(10)
         res.status(200).json(result)
     }
     catch(err){
@@ -26,5 +26,17 @@ exports.getProductController=async(req,res)=>{
         // console.log(result);
     }catch(err){
         res.status(401).json(err)
+    }
+}
+exports.getTrendingProductController=async(req,res)=>{
+    try {
+        const limits = 10;
+        const trendingProducts = await products.aggregate([
+            { $sample: { size: limits } }
+        ]);
+        res.status(200).json(trendingProducts);
+    } catch (err) {
+        console.error('Error random products:', err);
+        res.status(500).json(err);
     }
 }
