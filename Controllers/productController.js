@@ -36,7 +36,7 @@ exports.getTrendingProductController=async(req,res)=>{
         ]);
         res.status(200).json(trendingProducts);
     } catch (err) {
-        console.error('Error random products:', err);
+        // console.error('Error random products:', err);
         res.status(500).json(err);
     }
 }

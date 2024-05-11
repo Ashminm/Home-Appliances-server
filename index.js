@@ -5,8 +5,9 @@ require('./connection/db')
 const router=require('./Routes/route')
 
 const Home=express()
+const bodyParserLimit = '10mb';
 Home.use(cors())
-Home.use(express.json())
+Home.use(express.json({limit:bodyParserLimit}))
 Home.use(router)
 const PORT=3000 || process.env.PORT
 

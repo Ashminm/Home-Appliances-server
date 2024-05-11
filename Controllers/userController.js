@@ -36,7 +36,7 @@ exports.userLogin=async(req,res)=>{
         }
     }catch(err){
         res.status(401).json(err)
-        console.log(err);
+        // console.log(err);
     }
 }
 
@@ -50,3 +50,16 @@ exports.userLogin=async(req,res)=>{
            
         }
     }
+
+    exports.updateUserProfile = async (req, res) => {
+        try {
+          const profileId = req.payload;
+          const { profileImage, ...updateData } = req.body; 
+          const updatedUserProfile = await users.findOneAndUpdate({ _id: profileId }, { $set: { profileImage, ...updateData } }, { new: true });
+          res.status(200).json(updatedUserProfile);
+        } catch (err) {
+          res.status(401).json(err);
+        }
+      };
+      
+    

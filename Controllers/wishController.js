@@ -27,7 +27,7 @@ exports.getWishItem=async(req,res)=>{
         const userId=req.payload
         const wishListProduct= await wishlist.find({userId})
         res.status(200).json(wishListProduct)
-        console.log(wishListProduct);
+        // console.log(wishListProduct);
     }catch(err){
         res.status(401).json(err)
     }
