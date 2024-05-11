@@ -1,5 +1,7 @@
 const mongoose=require('mongoose')
 const users=require('../Models/userModel')
+const wishlist=require('../Models/wishModel')
+const carts=require('../Models/cartModel')
 const jwt=require('jsonwebtoken')
 
 
@@ -62,4 +64,15 @@ exports.userLogin=async(req,res)=>{
         }
       };
       
-    
+      exports.deleteAccount= async(req,res)=>{
+        try{
+            const userId = req.payload;
+
+            const userData = await users.deleteMany({ _id: userId });
+            const wishlistData=await wishlist.deleteMany({userId})
+            const cartData=await carts.deleteMany({userId})
+            res.status(200).json("Account delete Successfully",userData,wishlistData,cartData)
+        }catch(err){
+            res.status(401).json(err)
+        }
+      }

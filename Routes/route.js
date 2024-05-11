@@ -28,7 +28,7 @@ router.delete('/clear-wish',jwtMiddileware,wishlistController.clearCollection)
 router.get('/trending-product',productController.getTrendingProductController)
 router.get('/user-profile',jwtMiddileware,userController.geUserProfile)
 router.put('/user-profile',jwtMiddileware,userController.updateUserProfile)
-
+router.delete('/delete-account',jwtMiddileware,userController.deleteAccount)
 
 
 module.exports=router
