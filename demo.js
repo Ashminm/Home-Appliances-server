@@ -155,7 +155,7 @@
       "price": "899",
       "rating": "4.7",
       "description": "The television is an entertainment essential that provides high-quality picture and sound. It has multiple HDMI and USB ports for connecting external devices. The sleek black design and slim bezels enhance the viewing experience.",
-      "category": "living room",
+      "category": "bedroom",
       "tag": "black",
       "image": "https://m.media-amazon.com/images/I/41RZi2HP6wL._SR290,290_.jpg",
       "photos": [
@@ -365,7 +365,7 @@
       "price": "699.99",
       "rating": "4.3",
       "description": "Stay cool and comfortable with this smart air conditioner. It has a powerful cooling capacity and adjustable temperature settings to create the perfect indoor environment. The built-in smart technology allows you to control the air conditioner from your smartphone and set personalized schedules. With its modern design and energy-saving features, this air conditioner is ideal for any room.",
-      "category": "living room",
+      "category": "bedroom",
       "tag": "white",
       "image": "https://motorolain.vtexassets.com/arquivos/MotoAC-1000x700px-2.jpg",
       "photos":  [
@@ -395,7 +395,7 @@
       "price": "1299.99",
       "rating": "4.8",
       "description": "Experience immersive entertainment with this smart TV. It has a high-resolution display and built-in streaming services for endless entertainment options. The built-in smart technology allows you to control the TV with voice commands and access your favorite apps. With its sleek design and superior picture quality, this TV is a great addition to any living room.",
-      "category": "living room",
+      "category": "bedroom",
       "tag": "black",
       "image": "https://static.toiimg.com/thumb/msid-107664176,width-1280,height-720,resizemode-4/107664176.jpg",
       "photos":  [
@@ -425,7 +425,7 @@
       "price": "149.99",
       "rating": "4.4",
       "description": "Control the temperature of your home with this smart thermostat. It has a user-friendly interface and energy-saving features to help reduce your utility bills. The built-in smart technology allows you to adjust the thermostat from your smartphone and set personalized schedules. With its sleek design and compatibility with popular smart home systems, this thermostat is a great addition to any home.",
-      "category": "home automation",
+      "category": "electronics",
       "tag": "light green",
       "image": "https://cdn.thewirecutter.com/wp-content/media/2022/11/smartthermostats-2048px-3105.jpg",
       "photos":  [
@@ -440,7 +440,7 @@
       "price": "99.99",
       "rating": "4.3",
       "description": "Enjoy music and control your smart home devices with this smart speaker. It has a built-in voice assistant and high-quality audio for a great listening experience. The built-in smart technology allows you to play music, check the weather, and control your smart home with voice commands. With its compact design and wireless connectivity, this speaker is perfect for any room.",
-      "category": "audio",
+      "category": "electronics",
       "tag": "black",
       "image": "https://www.poojaratele.com/media/catalog/product/cache/28b568fbf82d79c53c9eab7361be58d0/a/m/amazon-echo-dot-4th-gen-smart-speaker-blk-thum1.jpg",
       "photos":  [
@@ -500,7 +500,7 @@
       "price": "249.99",
       "rating": "4.7",
       "description": "Secure your home with this smart door lock. It has keyless entry and remote access capabilities for added convenience. The built-in smart technology allows you to lock and unlock the door from your smartphone and receive activity alerts. With its sleek design and advanced security features, this door lock is a great addition to any home.",
-      "category": "home security",
+      "category": "electronics",
       "tag": "silver",
       "image": "https://smartify.in/wp-content/uploads/2019/07/Smart-Door-Lock-FS03.png",
       "photos":  [
@@ -530,7 +530,7 @@
       "price": "399.99",
       "rating": "4.5",
       "description": "Keep your floors clean and dust-free with this smart vacuum cleaner. It has a powerful suction and intelligent mapping system for efficient cleaning. The built-in smart technology allows you to control the vacuum cleaner from your smartphone and set cleaning schedules. With its sleek design and advanced features, this vacuum cleaner is a must-have for any home.",
-      "category": "home cleaning",
+      "category": "home",
       "tag": "gray",
       "image": "https://www.hindustantimes.com/ht-img/img/2024/02/06/1600x900/robotic_vacuum_cleaners_1707206320523_1707206358397.jpg",
       "photos":  [
@@ -665,7 +665,7 @@
       "price": "199.99",
       "rating": "4.6",
       "description": "The vacuum cleaner is a must-have appliance for keeping your home clean and dust-free. It features multiple cleaning modes and a powerful suction, ensuring that no dirt or debris is left behind. The machine is also energy-efficient, helping you save on your electricity bills. With its sleek design and user-friendly controls, this vacuum cleaner is a great choice for any home.",
-      "category": "cleaning",
+      "category": "home",
       "tag": "blue",
       "image": "https://ii1.pepperfry.com/media/catalog/product/k/e/1100x1210/kent-zoom-vacuum-cleaner--cordless--hoseless--rechargeable-130-watt-with-cyclonic-technology--bagles-itij27.jpg",
       "photos": [
@@ -695,7 +695,7 @@
       "price": "999.99",
       "rating": "4.8",
       "description": "The television is a must-have appliance for entertainment purposes. It features a high-resolution display and multiple connectivity options, allowing you to enjoy your favorite movies and shows in stunning detail. The TV is also energy-efficient, helping you save on your electricity bills. With its sleek design and smart features, this television is a great choice for any living room.",
-      "category": "living room",
+      "category": "bedroom",
       "tag": "silver black",
       "image": "https://www.isro.gov.in/media_isro/image/services/Television.jpg.webp",
       "photos": [
@@ -755,7 +755,7 @@
       "price": "79.99",
       "rating": "4.5",
       "description": "The fan is a must-have appliance for keeping your home cool and comfortable. It features multiple speed settings and a wide oscillation, ensuring that the air is circulated evenly throughout the room. The fan is also energy-efficient, helping you save on your electricity bills. With its sleek design and quiet operation, this fan is a great choice for any living space.",
-      "category": "living room",
+      "category": "bedroom",
       "tag": "black",
       "image": "https://blueberrysindia.com/wp-content/uploads/2023/12/MINI-ELANTRA-copy.jpg",
       "photos": [
@@ -800,7 +800,7 @@
       "price": "$99.99",
       "rating": "4.5",
       "description": "A stylish and functional addition to any bedroom. This bedside table features a spacious drawer and a lower shelf for extra storage. The sleek design and neutral color make it easy to blend with any decor.",
-      "category": "Furniture",
+      "category": "home",
       "tag": "Burnt umber",
       "image": "https://www.stylespafurniture.com/wp-content/uploads/2020/03/Estilo_Bedside_Table-2.jpg",
       "photos": [
@@ -815,7 +815,7 @@
       "price": "39.99",
       "rating": "4.2",
       "description": "Add a warm and cozy ambiance to your bedroom with this table lamp. The modern design and soft lighting create a relaxing atmosphere for reading or winding down in the evening.",
-      "category": "Lighting",
+      "category": "home",
       "tag": "red",
       "image": "https://m.media-amazon.com/images/I/71jIfDWFmEL.jpg",
       "photos": [
@@ -830,7 +830,7 @@
       "price": "129.99",
       "rating": "4.8",
       "description": "Transform your bedroom into a luxurious retreat with this comforter set. The soft and plush fabric provides ultimate comfort, while the elegant design adds a touch of sophistication to your space.",
-      "category": "Bedding",
+      "category": "bedroom",
       "tag": "Gray",
       "image": "https://m.media-amazon.com/images/I/81paKqczS7S.jpg",
       "photos":[
@@ -845,7 +845,7 @@
       "price": "199.99",
       "rating": "4.6",
       "description": "Create a cozy reading nook or a stylish seating area in your bedroom with this accent chair. The ergonomic design and cushioned seat offer maximum comfort, while the sleek and modern look adds a touch of elegance to your space.",
-      "category": "Furniture",
+      "category": "home",
       "tag": "Beige",
       "image": "https://m.media-amazon.com/images/I/51QQhwyLMIL.jpg",
       "photos": [
@@ -860,7 +860,7 @@
       "price": "79.99",
       "rating": "4.4",
       "description": "Make your bedroom appear larger and brighter with this wall mirror. The simple and minimalist design complements any decor style, while the high-quality glass provides a clear reflection.",
-      "category": "Decor",
+      "category": "home",
       "tag": "white",
       "image": "https://m.media-amazon.com/images/I/71595nSnl7L._AC_UF894,1000_QL80_.jpg",
       "photos":[
@@ -875,7 +875,7 @@
       "price": "49.99",
       "rating": "4.3",
       "description": "Enhance the privacy and style of your bedroom with this curtain set. The blackout feature blocks out unwanted light, while the elegant design adds a touch of sophistication to your space.",
-      "category": "Window",
+      "category": "home",
       "tag": "Navy Blue",
       "image": "https://images-na.ssl-images-amazon.com/images/I/81NyuS34lOL._AC_UL600_SR600,600_.jpg",
       "photos": [
@@ -890,7 +890,7 @@
       "price": "89.99",
       "rating": "4.7",
       "description": "Add warmth and comfort to your bedroom with this area rug. The soft and plush texture feels great underfoot, while the modern design adds a pop of color and style to your space.",
-      "category": "Flooring",
+      "category": "bedroom",
       "tag": "Multi-color",
       "image": "https://m.media-amazon.com/images/I/81YUesZobuL._AC_UF894,1000_QL80_.jpg",
       "photos": [
@@ -905,7 +905,7 @@
       "price": "299.99",
       "rating": "4.9",
       "description": "Organize your clothes and accessories in style with this dresser. The spacious drawers and sleek design make it a perfect addition to any bedroom.",
-      "category": "Furniture",
+      "category": "home",
       "tag": "Espresso",
       "image": "https://images-cdn.ubuy.co.in/634f5b91cd5c94199d1b2881-povison-modern-wide-drawer-dresser.jpg",
       "photos": [
@@ -920,7 +920,7 @@
       "price": "19.99",
       "rating": "4.1",
       "description": "Add a pop of color and comfort to your bedroom with this throw pillow set. The soft and durable fabric provides a cozy feel, while the vibrant colors brighten up your space.",
-      "category": "Bedding",
+      "category": "bedroom",
       "tag": "Assorted",
       "image": "https://m.media-amazon.com/images/I/812Fqs60raL.jpg",
       "photos": [
@@ -935,7 +935,7 @@
       "price": "59.99",
       "rating": "4.6",
       "description": "Elevate the style of your bedroom with this beautiful wall art. The high-quality print and frame add a touch of elegance to your space, while the unique design creates a focal point.",
-      "category": "Decor",
+      "category": "home",
       "tag": "Gold",
       "image": "https://www.vinoxo.in/11156-large_default/vinoxo-abstract-music-wall-art-painting.webp",
       "photos": [
@@ -950,7 +950,7 @@
       "price": "19.99",
       "rating": "4.5",
       "description": "This high-quality shower curtain is made of waterproof and durable polyester fabric. It features a modern design that will complement any bathroom decor. The curtain measures 72 inches by 72 inches, providing full coverage for most standard-sized showers.",
-      "category": "Bathroom Accessories",
+      "category": "bathroom",
       "tag": "White",
       "image": "https://rukminim2.flixcart.com/image/850/1000/knw2v0w0/curtain/y/q/r/transparent-clear-latest-shower-curtain-for-your-glad-bathroom-original-imag2gvza3s6qpnv.jpeg?q=20&crop=false",
       "photos": [
@@ -965,7 +965,7 @@
       "price": "9.99",
       "rating": "4.2",
       "description": "These soft and absorbent bath towels are made of 100% cotton. They are generously sized at 27 inches by 54 inches, providing maximum coverage and comfort. The towels feature a classic design and are available in a variety of colors.",
-      "category": "Towels",
+      "category": "bathroom",
       "tag": "Blue",
       "image": "https://m.media-amazon.com/images/I/91Vu0leCv-L._AC_UF1000,1000_QL80_.jpg",
       "photos": [
@@ -980,7 +980,7 @@
       "price": "7.99",
       "rating": "4.0",
       "description": "This durable toilet brush is made of high-quality plastic and features a sturdy handle for easy grip. The brush has strong bristles that effectively clean the toilet bowl. It comes with a matching holder for convenient storage.",
-      "category": "Cleaning Tools",
+      "category": "bathroom",
       "tag": "gray",
       "image": "https://m.media-amazon.com/images/I/61p0P1JEMiL.jpg",
       "photos": [
@@ -995,7 +995,7 @@
       "price": "12.99",
       "rating": "4.3",
       "description": "This stylish soap dispenser is made of premium-quality glass and features a stainless steel pump. It can hold up to 10 ounces of liquid soap or lotion. The dispenser is easy to refill and adds a touch of elegance to any bathroom.",
-      "category": "Bathroom Accessories",
+      "category": "bathroom",
       "tag": "golden",
       "image": "https://cdn.moglix.com/p/LahTe8ZFjeSnf-xxlarge.jpeg",
       "photos": [
@@ -1010,7 +1010,7 @@
       "price": "5.99",
       "rating": "4.1",
       "description": "This compact toothbrush holder is made of durable plastic and can hold up to 4 toothbrushes. It features a removable top for easy cleaning and a non-slip base to keep it in place. The holder is available in a variety of colors.",
-      "category": "Bathroom Accessories",
+      "category": "bathroom",
       "tag": "blue",
       "image": "https://www.bluee.in/wp-content/uploads/2023/10/market99-toothbrush-holder-with-diamond-cut-square-paste-holder.jpg",
       "photos": [
