@@ -3,13 +3,15 @@ const users=require('../Models/userModel')
 const wishlist=require('../Models/wishModel')
 const carts=require('../Models/cartModel')
 const jwt=require('jsonwebtoken')
+const admins=require('../Models/adminModel')
 
 
 exports.userRegister=async(req,res)=>{
     try{
         const {username,email,password}=req.body
         const existingUser=await users.findOne({email,password})
-        if(existingUser){
+        const existingAdmin=await admins.findOne({email,password})
+        if(existingUser || existingAdmin){
             res.status(406).json("Already Existing user...!")
         }
         else{
@@ -28,17 +30,21 @@ exports.userLogin=async(req,res)=>{
     try{
         const {email,password}=req.body
         const existingUser=await users.findOne({email,password})
+        const existingAdmin=await admins.findOne({email,password})
         if(existingUser){
             const token=jwt.sign({userId:existingUser._id}, process.env.JWT_SEACRETKEY)
-            res.status(200).json({token,existingUser})
+            res.status(200).json({token,existingUser,role:"user"})
             // console.log(token,existingUser);
+        }
+        else if(existingAdmin){
+            const token=jwt.sign({userId:existingAdmin._id}, process.env.JWT_SEACRETKEY)
+            res.status(200).json({token,existingAdmin,role:"admin"})
         }
         else{
             res.status(406).json("Invalid email or password!!")
         }
     }catch(err){
-        res.status(401).json(err)
-        // console.log(err);
+        res.status(401).json("SOMTHING WANT WRONG" + err);
     }
 }
 
