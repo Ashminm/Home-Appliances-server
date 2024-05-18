@@ -4,6 +4,7 @@ const userController=require('../Controllers/userController')
 const wishlistController=require('../Controllers/wishController')
 const cartController=require('../Controllers/cartController')
 const jwtMiddileware=require('../Middileware/jwtMiddileware')
+const adminController=require('../Controllers/adminController')
 
 const router= new express.Router()
 
@@ -30,6 +31,12 @@ router.get('/trending-product',productController.getTrendingProductController)
 router.get('/user-profile',jwtMiddileware,userController.geUserProfile)
 router.put('/user-profile',jwtMiddileware,userController.updateUserProfile)
 router.delete('/delete-account',jwtMiddileware,userController.deleteAccount)
+router.get('/admin-profile',jwtMiddileware,adminController.getAdminProfile)
+router.put('/admin-profile',jwtMiddileware,adminController.updateAdminProfile)
+router.delete('/delete-admin-account',jwtMiddileware,adminController.deleteAdminAccount)
+router.get('/all-users',adminController.getAllUsers)
+
+
 
 
 module.exports=router
