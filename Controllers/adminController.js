@@ -1,6 +1,6 @@
 const admins=require('../Models/adminModel')
 const users = require('../Models/userModel')
-
+const products=require('../Models/prodectModel')
 
 exports.getAdminProfile=async(req,res)=>{
     try{
@@ -43,5 +43,23 @@ exports.updateAdminProfile = async (req, res) => {
     }
     catch(err){
       res.status(401).json(err)
+    }
+  }
+
+  exports.addProduct=async(req,res)=>{
+    const {title,id,category,tag,rating,price,description,image,photos}=req.body
+
+    try{
+      const existingProduct=await products.findOne({id})
+      if(existingProduct){
+        res.status(406).json("Existing Product Id")
+      }
+      else{
+        const newProduct=new products({title,id,category,tag,rating,price,description,image,photos})
+        await newProduct.save()
+        res.status(200).json(newProduct)
+      }
+    }catch(err){
+      res.status(401).json("Something want Wrong :"+ err)
     }
   }

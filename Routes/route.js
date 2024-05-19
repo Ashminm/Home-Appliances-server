@@ -28,6 +28,8 @@ router.get('/decri-item/:id',jwtMiddileware,cartController.decQuantity)
 router.delete('/clear-cart',jwtMiddileware,cartController.emptyCart)
 router.delete('/clear-wish',jwtMiddileware,wishlistController.clearCollection)
 router.get('/trending-product',productController.getTrendingProductController)
+router.get('/recent-products',productController.getRecentProductsController)
+router.get('/low-price-product',productController.getLowPriceProductsController)
 router.get('/user-profile',jwtMiddileware,userController.geUserProfile)
 router.put('/user-profile',jwtMiddileware,userController.updateUserProfile)
 router.delete('/delete-account',jwtMiddileware,userController.deleteAccount)
@@ -35,7 +37,7 @@ router.get('/admin-profile',jwtMiddileware,adminController.getAdminProfile)
 router.put('/admin-profile',jwtMiddileware,adminController.updateAdminProfile)
 router.delete('/delete-admin-account',jwtMiddileware,adminController.deleteAdminAccount)
 router.get('/all-users',adminController.getAllUsers)
-
+router.post('/add-product',adminController.addProduct)
 
 
 
