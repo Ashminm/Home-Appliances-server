@@ -11,7 +11,7 @@ exports.getAllProductController=async(req,res)=>{
 }
 exports.getLimitProductController=async(req,res)=>{
     try{
-        const result= await products.find().limit(10)
+        const result= await products.find().limit(15)
         res.status(200).json(result)
     }
     catch(err){
