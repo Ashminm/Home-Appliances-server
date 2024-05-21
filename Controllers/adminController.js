@@ -63,3 +63,26 @@ exports.updateAdminProfile = async (req, res) => {
       res.status(401).json("Something want Wrong :"+ err)
     }
   }
+
+
+  // exports.getSpecificProduct = async (req, res) => {
+  //   try{
+  //     const result=await products.findOne({_id:req.params.id})
+  //     res.status(200).json(result)
+  //     // console.log(result);
+  // }catch(err){
+  //     res.status(401).json(err)
+  // }
+  // };
+  exports.getSpecificProduct = async (req, res) => {
+   const productId=req.payload
+   const {title,category,tag,rating,price,description,image,photos}=req.body
+   const {id}=req.params
+   try{
+    console.log("edit product");
+    const result=await products.findByIdAndUpdate({_id:id},{title,category,tag,rating,price,description,image,photos,productId})
+    res.status(200).json(result)
+   }catch(err){
+    res.status(401).json(err)
+   }
+  };
