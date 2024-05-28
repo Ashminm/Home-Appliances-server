@@ -86,3 +86,26 @@ exports.updateAdminProfile = async (req, res) => {
     res.status(401).json(err)
    }
   };
+
+exports.deleteProduct=async(req,res)=>{
+    try{
+      const pId=req.params.id
+      const pItemDelete=await products.findOneAndDelete({_id:pId})
+      res.status(200).json(pItemDelete)
+    }catch(err){
+      res.status(401).json(err)
+    }
+  }
+
+
+  exports.deleteUserAccount= async(req,res)=>{
+    console.log("delete inside!!");
+    try{
+        const userId = req.params.id;
+        const userDelete = await users.findOneAndDelete({ _id:userId});
+        res.status(200).json(userDelete)
+        // console.log(userDelete);
+    }catch(err){
+        res.status(401).json(err)
+    }
+  }
