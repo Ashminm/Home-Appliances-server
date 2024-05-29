@@ -64,7 +64,6 @@ exports.updateAdminProfile = async (req, res) => {
     }
   }
 
-
   // exports.getSpecificProduct = async (req, res) => {
   //   try{
   //     const result=await products.findOne({_id:req.params.id})
@@ -74,7 +73,7 @@ exports.updateAdminProfile = async (req, res) => {
   //     res.status(401).json(err)
   // }
   // };
-  exports.getSpecificProduct = async (req, res) => {
+  exports.editProduct = async (req, res) => {
    const productId=req.payload
    const {title,category,tag,rating,price,description,image,photos}=req.body
    const {id}=req.params

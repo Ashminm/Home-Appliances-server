@@ -38,9 +38,8 @@ router.put('/admin-profile',jwtMiddileware,adminController.updateAdminProfile)
 router.delete('/delete-admin-account',jwtMiddileware,adminController.deleteAdminAccount)
 router.get('/all-users',adminController.getAllUsers)
 router.post('/add-product',adminController.addProduct)
-router.put('/admin-edit-product/:id',jwtMiddileware,adminController.getSpecificProduct)
+router.put('/admin-edit-product/:id',jwtMiddileware,adminController.editProduct)
 router.delete('/product-delete/:id',jwtMiddileware,adminController.deleteProduct)
 router.delete('/delete-user/:id',jwtMiddileware,adminController.deleteUserAccount)
-
 
 module.exports=router
