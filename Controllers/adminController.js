@@ -1,6 +1,7 @@
 const admins=require('../Models/adminModel')
 const users = require('../Models/userModel')
 const products=require('../Models/prodectModel')
+const mongoose=require('mongoose')
 
 exports.getAdminProfile=async(req,res)=>{
     try{
@@ -74,16 +75,29 @@ exports.updateAdminProfile = async (req, res) => {
   // }
   // };
   exports.editProduct = async (req, res) => {
-   const productId=req.payload
-   const {title,category,tag,rating,price,description,image,photos}=req.body
-   const {id}=req.params
-   try{
-    console.log("edit product");
-    const result=await products.findByIdAndUpdate({_id:id},{title,category,tag,rating,price,description,image,photos,productId})
-    res.status(200).json(result)
-   }catch(err){
-    res.status(401).json(err)
-   }
+    const { title, category, tag, rating, price, description, image, photos } = req.body;
+    const { id } = req.params; // id from the URL parameters
+  
+    try {
+      // Ensure id is a valid ObjectId
+      if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(400).json({ message: 'Invalid product ID' });
+      }
+  
+      const result = await products.findByIdAndUpdate(
+        id, 
+        { title, category, tag, rating, price, description, image, photos },
+        { new: true, runValidators: true }  // Return the updated document and run validation
+      );
+  
+      if (!result) {
+        return res.status(404).json({ message: 'Product not found' });
+      }
+  
+      res.status(200).json(result);
+    } catch (err) {
+      res.status(500).json({ message: err.message });
+    }
   };
 
 exports.deleteProduct=async(req,res)=>{
