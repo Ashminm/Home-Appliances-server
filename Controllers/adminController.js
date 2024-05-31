@@ -74,12 +74,12 @@ exports.updateAdminProfile = async (req, res) => {
   //     res.status(401).json(err)
   // }
   // };
+  
   exports.editProduct = async (req, res) => {
     const { title, category, tag, rating, price, description, image, photos } = req.body;
-    const { id } = req.params; // id from the URL parameters
+    const { id } = req.params;
   
     try {
-      // Ensure id is a valid ObjectId
       if (!mongoose.Types.ObjectId.isValid(id)) {
         return res.status(400).json({ message: 'Invalid product ID' });
       }
@@ -87,7 +87,7 @@ exports.updateAdminProfile = async (req, res) => {
       const result = await products.findByIdAndUpdate(
         id, 
         { title, category, tag, rating, price, description, image, photos },
-        { new: true, runValidators: true }  // Return the updated document and run validation
+        { new: true, runValidators: true } 
       );
   
       if (!result) {

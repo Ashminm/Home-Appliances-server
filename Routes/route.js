@@ -5,6 +5,7 @@ const wishlistController=require('../Controllers/wishController')
 const cartController=require('../Controllers/cartController')
 const jwtMiddileware=require('../Middileware/jwtMiddileware')
 const adminController=require('../Controllers/adminController')
+const reviewController=require('../Controllers/reviewController')
 
 const router= new express.Router()
 
@@ -41,5 +42,7 @@ router.post('/add-product',adminController.addProduct)
 router.put('/admin-edit-product/:id',jwtMiddileware,adminController.editProduct)
 router.delete('/product-delete/:id',jwtMiddileware,adminController.deleteProduct)
 router.delete('/delete-user/:id',jwtMiddileware,adminController.deleteUserAccount)
+router.post('/user-review-data',jwtMiddileware,reviewController.addReview)
+router.get('/get-review-product',reviewController.getProductBaseReview)
 
 module.exports=router
