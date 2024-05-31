@@ -18,9 +18,20 @@ exports.addReview=async(req,res)=>{
 
 exports.getProductBaseReview = async (req, res) => {
     try {
-        const titleIdBase = await reviews.find();
-        res.status(200).json(titleIdBase);
-    } catch (err) {
+        const result = await reviews.find();
+        res.status(200).json(result);
+    } catch(err) {
         res.status(500).json(err);
     }
 };
+
+
+exports.deleteReview=async(req,res)=>{
+    try{
+        const reviewId=req.params.id
+        const result=await reviews.findOneAndDelete({_id:reviewId})
+        res.status(200).json(result)
+    }catch(err){
+        res.status(401).json(err)
+    }
+}
