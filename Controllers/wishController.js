@@ -1,5 +1,3 @@
-const mongoose = require("mongoose");
-const wishlistModel = require("../Models/wishModel");
 const wishlist = require("../Models/wishModel");
 
 exports.addToWishlist = async (req, res) => {
@@ -7,12 +5,12 @@ exports.addToWishlist = async (req, res) => {
     const userId = req.payload;
 
     try {
-        const existingProduct = await wishlistModel.findOne({ userId, id });
+        const existingProduct = await wishlist.findOne({ userId, id });
 
         if (existingProduct) {
             return res.status(406).json({ message: "Product already exists in wishlist."});
         }
-        const newItem = new wishlistModel({ id, title, price, category, tag, image, userId});
+        const newItem = new wishlist({ id, title, price, category, tag, image, userId});
         await newItem.save();
 
         return res.status(201).json(newItem);

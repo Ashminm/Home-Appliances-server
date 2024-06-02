@@ -45,5 +45,7 @@ router.delete('/delete-user/:id',jwtMiddileware,adminController.deleteUserAccoun
 router.post('/user-review-data',jwtMiddileware,reviewController.addReview)
 router.get('/get-review-product',reviewController.getProductBaseReview)
 router.delete('/delete-review/:id',jwtMiddileware,reviewController.deleteReview)
+router.get('/get-your-review',jwtMiddileware,reviewController.yourReviws)
+router.get('/get-admin-all-review',jwtMiddileware,adminController.allreviews)
 
 module.exports=router

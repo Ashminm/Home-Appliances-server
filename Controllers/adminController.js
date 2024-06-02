@@ -2,6 +2,7 @@ const admins=require('../Models/adminModel')
 const users = require('../Models/userModel')
 const products=require('../Models/prodectModel')
 const mongoose=require('mongoose')
+const reviews=require('../Models/reviewModel')
 
 exports.getAdminProfile=async(req,res)=>{
     try{
@@ -41,6 +42,7 @@ exports.updateAdminProfile = async (req, res) => {
     try{
       const result=await users.find()
       res.status(200).json(result)
+      console.log(result);
     }
     catch(err){
       res.status(401).json(err)
@@ -122,3 +124,13 @@ exports.deleteProduct=async(req,res)=>{
         res.status(401).json(err)
     }
   }
+
+  exports.allreviews=async(req,res)=>{
+    try{
+        const yourReviw=await reviews.find()
+        res.status(200).json(yourReviw)
+        // console.log(yourReviw);
+    }catch(err){
+        res.status(401).json(err)
+    }
+}

@@ -4,7 +4,7 @@ const reviewSchema=new mongoose.Schema({
     id:{
         type:Number,
         required:true,
-        unique:true
+        // unique:true
     },
     title:{
         type:String,
@@ -26,6 +26,12 @@ const reviewSchema=new mongoose.Schema({
         type:String,
         required:true
     },
+    userId: {
+        type: String,
+        required: true,
+      
+    }
+  
 })
 
 const reviews = mongoose.model('reviews',reviewSchema);
