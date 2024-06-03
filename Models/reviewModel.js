@@ -4,7 +4,11 @@ const reviewSchema=new mongoose.Schema({
     id:{
         type:Number,
         required:true,
-        // unique:true
+        unique:true
+    },
+    productId: { 
+        type: Number,
+        required: true
     },
     title:{
         type:String,

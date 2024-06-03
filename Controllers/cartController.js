@@ -35,7 +35,8 @@ exports.getCartAll=async(req,res)=>{
 
 exports.getHomeCart=async(req,res)=>{
     try{
-        const cartProduct= await carts.find().limit(4)
+        const userId=req.payload
+        const cartProduct= await carts.find({userId}).limit(4)
         res.status(200).json(cartProduct)
     }catch(err){
         res.status(401).json(err)

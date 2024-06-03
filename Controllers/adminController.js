@@ -114,7 +114,7 @@ exports.deleteProduct=async(req,res)=>{
 
 
   exports.deleteUserAccount= async(req,res)=>{
-    console.log("delete inside!!");
+    // console.log("delete inside!!");
     try{
         const userId = req.params.id;
         const userDelete = await users.findOneAndDelete({ _id:userId});

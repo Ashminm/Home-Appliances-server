@@ -33,7 +33,8 @@ exports.getWishItem=async(req,res)=>{
 
 exports.getWishHome=async(req,res)=>{
     try{
-        const wishListProduct= await wishlist.find().limit(4)
+        const userId=req.payload
+        const wishListProduct= await wishlist.find({userId}).limit(4)
         res.status(200).json(wishListProduct)
     }catch(err){
         res.status(401).json(err)
