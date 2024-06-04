@@ -66,6 +66,8 @@ exports.updateAdminProfile = async (req, res) => {
       res.status(401).json("Something want Wrong :"+ err)
     }
   }  
+
+  
   exports.editProduct = async (req, res) => {
     const { title, category, tag, rating, price, description, image, photos } = req.body;
     const { id } = req.params;
