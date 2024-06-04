@@ -32,10 +32,8 @@ const reviewSchema=new mongoose.Schema({
     },
     userId: {
         type: String,
-        required: true,
-      
+        required: true,  
     }
-  
 })
 
 const reviews = mongoose.model('reviews',reviewSchema);

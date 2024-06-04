@@ -85,27 +85,6 @@ exports.decQuantity=async(req,res)=>{
     }
 }
 
-//    client view component side quantity Decrease
-// exports.decViewQuantity = async (req, res) => {
-//     try {
-//         const cartId = req.params.id;
-//         const existingItem = await carts.findOne({ _id: cartId });
-//         existingItem.quantity--;
-//         if (existingItem.quantity <= 0) {
-//             existingItem.quantity = 1;
-//             res.status(200).json({ message: "Low quantity", isLowQuantity: true });
-//         } else {
-//             existingItem.totalPrice = existingItem.price * existingItem.quantity;
-//             await existingItem.save();
-//             res.status(200).json({ message: "Quantity Decreased", isLowQuantity: false });
-//         }
-//     } catch (err) {
-//         res.status(500).json(err);
-//     }
-// };
-
-// ---------------------end---------------------------------
-
 exports.emptyCart=async(req,res)=>{
     try{
         const userId = req.payload

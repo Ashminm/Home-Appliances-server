@@ -5,7 +5,6 @@ const carts=require('../Models/cartModel')
 const jwt=require('jsonwebtoken')
 const admins=require('../Models/adminModel')
 
-
 exports.userRegister=async(req,res)=>{
     try{
         const {username,email,password}=req.body

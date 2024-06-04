@@ -65,18 +65,7 @@ exports.updateAdminProfile = async (req, res) => {
     }catch(err){
       res.status(401).json("Something want Wrong :"+ err)
     }
-  }
-
-  // exports.getSpecificProduct = async (req, res) => {
-  //   try{
-  //     const result=await products.findOne({_id:req.params.id})
-  //     res.status(200).json(result)
-  //     // console.log(result);
-  // }catch(err){
-  //     res.status(401).json(err)
-  // }
-  // };
-  
+  }  
   exports.editProduct = async (req, res) => {
     const { title, category, tag, rating, price, description, image, photos } = req.body;
     const { id } = req.params;
@@ -114,7 +103,6 @@ exports.deleteProduct=async(req,res)=>{
 
 
   exports.deleteUserAccount= async(req,res)=>{
-    // console.log("delete inside!!");
     try{
         const userId = req.params.id;
         const userDelete = await users.findOneAndDelete({ _id:userId});

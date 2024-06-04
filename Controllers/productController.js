@@ -36,8 +36,6 @@ exports.getLowPriceProductsController = async (req, res) => {
     }
 };
 
-
-
 exports.getProductController=async(req,res)=>{
     try{
         const result=await products.findOne({id:req.params.id})

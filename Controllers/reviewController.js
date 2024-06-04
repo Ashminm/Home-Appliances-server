@@ -1,24 +1,5 @@
 const reviews = require("../Models/reviewModel");
 
-// exports.addReview = async (req, res) => {
-//     const {id, title, reviewTitle, description, username, image } = req.body;
-//     const userId = req.payload;
-//     try {
-//         const existingReview = await reviews.findOne({ title,username,userId});
-//         if (existingReview) {
-//             res.status(406).json("You have already reviewed this product.");
-//             console.log(existingReview);
-//         } else {
-//             const newReview = new reviews({id, title, reviewTitle, description, username, image,userId });
-//             await newReview.save();
-//             res.status(200).json(newReview);
-//         }
-//     } catch (err) {
-//         res.status(401).json("Something want wrong");
-//         console.log(err);
-//     }
-// };
-
 exports.addReview = async (req, res) => {
     const { title, reviewTitle, description, username, image,productId  } = req.body;
     const userId = req.payload; 
