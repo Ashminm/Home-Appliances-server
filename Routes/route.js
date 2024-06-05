@@ -1,4 +1,5 @@
 const express=require('express')
+
 const productController=require('../Controllers/productController')
 const userController=require('../Controllers/userController')
 const wishlistController=require('../Controllers/wishController')
@@ -6,6 +7,7 @@ const cartController=require('../Controllers/cartController')
 const jwtMiddileware=require('../Middileware/jwtMiddileware')
 const adminController=require('../Controllers/adminController')
 const reviewController=require('../Controllers/reviewController')
+const contactController=require('../Controllers/contactController')
 
 const router= new express.Router()
 
@@ -46,5 +48,7 @@ router.get('/get-review-product',reviewController.getProductBaseReview)
 router.delete('/delete-review/:id',jwtMiddileware,reviewController.deleteReview)
 router.get('/get-your-review',jwtMiddileware,reviewController.yourReviws)
 router.get('/get-admin-all-review',jwtMiddileware,adminController.allreviews)
+router.post('/user-feedback',contactController.addContact)
+router.get('/get-user-feedback',jwtMiddileware,adminController.getAllFeedback)
 
 module.exports=router

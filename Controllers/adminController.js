@@ -3,6 +3,7 @@ const users = require('../Models/userModel')
 const products=require('../Models/prodectModel')
 const mongoose=require('mongoose')
 const reviews=require('../Models/reviewModel')
+const contacts=require('../Models/contactModel')
 
 exports.getAdminProfile=async(req,res)=>{
     try{
@@ -123,4 +124,13 @@ exports.deleteProduct=async(req,res)=>{
     }catch(err){
         res.status(401).json(err)
     }
+}
+
+exports.getAllFeedback=async(req,res)=>{
+  try{
+    const allfeedback=await contacts.find()
+    res.status(200).json(allfeedback)
+  }catch(err){
+    res.status(401).json(err)
+  }
 }
