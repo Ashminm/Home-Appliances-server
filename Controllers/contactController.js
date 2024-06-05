@@ -11,3 +11,22 @@ exports.addContact=async(req,res)=>{
         res.status(401).json("Something Went Wrong. Please try after some times..!!")
     }
 }
+
+exports.deleteFeed=async(req,res)=>{
+    try{
+        const feedId=req.params.id
+        const result=await contacts.findOneAndDelete({_id:feedId})
+        res.status(200).json(result)
+    }catch(err){
+        res.status(401).json(err)
+    }
+}
+exports.deleteAll=async(req,res)=>{
+    try{
+
+        const result=await contacts.deleteMany()
+        res.status(200).json(result)
+    }catch(err){
+        res.status(401).json(err)
+    }
+}
