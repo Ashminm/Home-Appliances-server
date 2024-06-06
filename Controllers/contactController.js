@@ -23,7 +23,6 @@ exports.deleteFeed=async(req,res)=>{
 }
 exports.deleteAll=async(req,res)=>{
     try{
-
         const result=await contacts.deleteMany()
         res.status(200).json(result)
     }catch(err){

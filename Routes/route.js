@@ -52,5 +52,6 @@ router.post('/user-feedback',contactController.addContact)
 router.get('/get-user-feedback',jwtMiddileware,adminController.getAllFeedback)
 router.delete('/delete-feed/:id',jwtMiddileware,contactController.deleteFeed)
 router.delete('/delete-all-feed',jwtMiddileware,contactController.deleteAll)
+router.delete('/detete-all-review',jwtMiddileware,reviewController.clearAllReviews)
 
 module.exports=router

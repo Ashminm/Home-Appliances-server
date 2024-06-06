@@ -50,3 +50,12 @@ exports.yourReviws = async (req, res) => {
         res.status(401).json(err);
     }
 };
+
+exports.clearAllReviews=async(req,res)=>{
+    try{
+        const result =await reviews.deleteMany()
+        res.status(200).json(result)
+    }catch(err){
+        res.status(401).json(err)
+    }
+}
