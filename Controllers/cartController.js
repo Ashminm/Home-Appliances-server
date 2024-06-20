@@ -4,7 +4,7 @@ exports.addToCart=async(req,res)=>{
     const { id, title, price, category, tag, image, quantity} = req.body;
     const userId = req.payload;
     try{
-        const existingProduct=await carts.findOne({id,userId})
+        const existingProduct=await carts.findOne({userId,id})
         if(existingProduct){
             existingProduct.quantity++
             existingProduct.totalPrice=existingProduct.quantity * existingProduct.price
@@ -14,8 +14,9 @@ exports.addToCart=async(req,res)=>{
             const newcart=new carts({
                 id, title, price, category, tag, image, quantity, totalPrice:price, userId
             })
-            newcart.save()
-            res.status(200).json("Item Added to cart")
+            await newcart.save()
+            // res.status(200).json("Item Added to cart")
+            res.status(200).json(newcart)
         }
     }catch(err){
         console.log(err);
